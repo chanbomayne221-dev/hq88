@@ -2792,7 +2792,7 @@ export function startBot(): TelegramBot | null {
         `📝 Nội dung: ID ${telegramId}\n` +
         `⏳ Hiệu lực: ~10 phút`;
       try {
-        await bot.sendPhoto(chatId, QR_IMAGE_PATH, { caption });
+        await bot.sendPhoto(chatId,https://api.vietqr.io/image/970449-0344127655-HxJXGbk.jpg?accountName=VU%20BAN%20SUP, { caption });
       } catch (e: any) {
         console.error("sendPhoto error:", e.message);
         await bot.sendMessage(chatId, caption);
