@@ -8,5 +8,9 @@
     "startCommand": "npm start",
     "restartPolicyType": "ALWAYS",
     "restartPolicyMaxRetries": 10
+  },
+  "variables": {
+    "RAILPACK_NODE_VERSION": "20",
+    "RAILPACK_BUILD_APT_PACKAGES": "python3 make g++"
   }
 }
