@@ -2483,7 +2483,7 @@ export function startBot(): TelegramBot | null {
       }
       const welcomeBonus = isNew ? `\n\n🎁 Bạn vừa nhận được *${formatNumber(SIGNUP_BONUS)}* tiền thưởng đăng ký!` : "";
       await bot.sendMessage(chatId,
-        `🎰 Chào mừng đến với ${BOT_NAME}!${welcomeBonus}\n\nNhấn 🏦 Tài Khoản để xem thông tin tài khoản của bạn.\nROOM TÀI XỈU SĂN HŨ https://t.me/hq88txroom`,
+        `🎰 Chào mừng đến với ${BOT_NAME}!${welcomeBonus}\n\nNhấn 🏦 Tài Khoản để xem thông tin tài khoản của bạn.\nROOM TÀI XỈU SĂN HŨ https://t.me/xombaoref`,
         { parse_mode: "Markdown", ...mainMenuKeyboard() }
       );
     } catch (e) { console.error(e); }
@@ -3058,7 +3058,7 @@ export function startBot(): TelegramBot | null {
       if (data === "game_taixiu_sanhu") {
         const msgText =
           `💥GAME TÀI XỈU SĂN HŨ💥\n` +
-          `Nhóm để chơi game: [@hq88room]\n` +
+          `Nhóm để chơi game: [xombaoref]\n` +
           `Lưu ý các lệnh sau được chơi tại Room, nếu chơi tại Bot sẽ là game khác và cách tính kết quả khác so với Room.\n` +
           `Game T X tại Room\n` +
           `--------------------\n` +
@@ -3359,7 +3359,7 @@ export function startBot(): TelegramBot | null {
         case "acc_event": await bot.sendMessage(chatId, "🎪 *SỰ KIỆN*\n\n🔥 Nạp 100k nhận bonus 20%\n🎯 Top cược tuần nhận thưởng\n🏆 Điểm danh 7 ngày nhận 5.000", { parse_mode: "Markdown" }); break;
         case "acc_diemdanh": await handleCheckin(chatId, telegramId); break;
         case "acc_tichluynap": await handleAccumulatedDeposit(chatId, user); break;
-        case "acc_hotro": await bot.sendMessage(chatId, `?? Hỗ Trợ\n🕐 24/7\n📱 Admin: @huybuwin\n💬 Group Tài Xỉu : https://t.me/hq88txroom`); break;
+        case "acc_hotro": await bot.sendMessage(chatId, `?? Hỗ Trợ\n🕐 24/7\n📱 Admin: @huybuwin\n💬 Group Tài Xỉu : https://t.me/xombaoref`); break;
       }
     } catch (e) { console.error(e); }
   });
