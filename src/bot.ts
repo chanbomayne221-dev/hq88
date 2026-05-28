@@ -1885,7 +1885,7 @@ async function processWithdraw(chatId: number, telegramId: number, amount: numbe
   if (amount < 100_000) { await bot.sendMessage(chatId, "❗ Rút tối thiểu 101.000!"); return; }
   if (!isAdmin(telegramId)) {
     if (user.total_deposit < 15_000) {
-      await bot.sendMessage(chatId, `❌ Bạn chưa đủ điều kiện để rút tiền!\nCần tổng nạp tối thiểu *15.000* (hiện tại: ${formatNumber(user.total_deposit)}).`, { parse_mode: "Markdown" });
+      await bot.sendMessage(chatId, `❌ Bạn chưa đủ điều kiện để rút tiền!\nCần tổng nạp tối thiểu *30.000* (hiện tại: ${formatNumber(user.total_deposit)}).`, { parse_mode: "Markdown" });
       return;
     }
     const wagerLeft = getWagerRequired(user.id);
@@ -1939,7 +1939,7 @@ async function processTransfer(chatId: number, telegramId: number, targetTelegra
   if (!Number.isFinite(amount) || amount < TRANSFER_MIN) { await bot.sendMessage(chatId, `❗ Số tiền tối thiểu là ${formatNumber(TRANSFER_MIN)}.`); return; }
   if (!isAdmin(telegramId)) {
     if (!hasFirstDeposit(sender)) {
-      await bot.sendMessage(chatId, `❌ Bạn cần nạp tối thiểu 20.000đ để sử dụng chức năng chuyển tiền.`);
+      await bot.sendMessage(chatId, `❌ Bạn cần nạp tối thiểu 30.000đ để sử dụng chức năng chuyển tiền.`);
       return;
     }
     const wagerLeft = getWagerRequired(sender.id);
